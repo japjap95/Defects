@@ -19,14 +19,17 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.example.testing_load.LoginMenu"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="landscape" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.testing_load.MainActivity" >
+        <activity
+            android:name="com.example.testing_load.MainActivity"
+            android:screenOrientation="landscape" >
         </activity>
         <activity android:name="com.example.testing_load.VehicleSelector" >
         </activity>

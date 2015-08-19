@@ -20,7 +20,7 @@ public final class R {
     }
     public static final class id {
         public static final int EditText01=0x7f090028;
-        public static final int action_settings=0x7f09002c;
+        public static final int action_settings=0x7f09002d;
         public static final int btnLogin=0x7f09001b;
         public static final int btnitemlevel=0x7f090013;
         public static final int btnnoteslevel=0x7f090017;
@@ -29,8 +29,8 @@ public final class R {
         public static final int button2=0x7f09001c;
         public static final int button3=0x7f09001d;
         public static final int cancelnotes=0x7f090023;
-        public static final int deviceID=0x7f090021;
-        public static final int errormsg=0x7f090020;
+        public static final int deviceID=0x7f090020;
+        public static final int errormsg=0x7f090021;
         public static final int etitemlevel=0x7f090014;
         public static final int etsublevel=0x7f090010;
         public static final int ettoplevel=0x7f09000c;
@@ -38,8 +38,9 @@ public final class R {
         public static final int ll1=0x7f090001;
         public static final int ll2=0x7f090005;
         public static final int login_logo=0x7f09001e;
-        public static final int manu=0x7f09002b;
-        public static final int model=0x7f09002a;
+        public static final int logout=0x7f09002a;
+        public static final int menu=0x7f09002c;
+        public static final int model=0x7f09002b;
         public static final int next=0x7f090029;
         public static final int nil=0x7f090004;
         public static final int noteadd=0x7f090018;

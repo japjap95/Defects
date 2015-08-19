@@ -29,6 +29,7 @@ public class LoginMenu extends Activity implements OnClickListener {
 	Button btnLogin;
 	TextView errormsg, device_id;
 	ProgressDialog dialog;
+
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +59,7 @@ public class LoginMenu extends Activity implements OnClickListener {
 		        }
 
 
-				device_id.setText("Device ID:"+deviceid);
+//				device_id.setText("Device ID:"+deviceid);
 		
 	}
 	
@@ -148,9 +149,15 @@ public class LoginMenu extends Activity implements OnClickListener {
 		// TODO Auto-generated method stub
 		getPin = txtPin.getText().toString();
 		if(getPin.length()!=4){
-			//Toast.makeText(getApplicationContext(), "Please Input PIN at least 4 characters",Toast.LENGTH_LONG).show();
+//			Toast.makeText(getApplicationContext(), "PIN must be 4 digits.",Toast.LENGTH_LONG).show();
+			errormsg.setVisibility(View.VISIBLE);
 			errormsg.setTextColor(Color.RED);
 			errormsg.setText("Pin must contain 4 digits.");
+			errormsg.postDelayed(new Runnable() {
+				public void run() {
+					errormsg.setVisibility(View.INVISIBLE);
+				}
+			}, 3000);
 		}
 		else{
 			//url_main = "http://www.webfleetsystems.co.uk/getoperator.ashx?pin="+getPin;

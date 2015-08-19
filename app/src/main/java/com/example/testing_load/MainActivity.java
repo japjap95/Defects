@@ -28,27 +28,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 
-public class
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        MainActivity extends Activity {
+public class MainActivity extends Activity {
 
 	/** Called when the activity is first created. */
 

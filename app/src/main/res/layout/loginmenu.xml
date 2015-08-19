@@ -45,12 +45,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/errormsg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"/>
-
         <Button
             android:id="@+id/btnLogin"
             android:layout_width="250dp"
@@ -60,7 +54,7 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:layout_marginTop="15dip"
-            android:textSize="20px"
+            android:textSize="40px"
             android:text="@string/next" />
 
     </RelativeLayout>
@@ -70,5 +64,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autoText="false" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/errormsg"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:layout_alignParentEnd="true"
+            android:layout_column="1"
+            android:layout_gravity="bottom|center_horizontal"/>
+    </TableRow>
 
 </TableLayout>

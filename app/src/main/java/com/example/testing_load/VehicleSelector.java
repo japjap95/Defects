@@ -37,9 +37,10 @@ public class VehicleSelector extends Activity implements OnClickListener {
 	int[] data_id;
 	int pos = 0, id = 0, b=0;
     EditText et;
-    TextView tmodel, tmanf;
+    TextView tmodel, tmake;
     String[] str;
     Button btn;
+	Button btnLogout;
     ProgressDialog dialog;
     String[] datainfo = new String[16];
     String[] datainfo1 = new String[16];
@@ -57,12 +58,13 @@ public class VehicleSelector extends Activity implements OnClickListener {
 		lvTopCat = (ListView) findViewById(R.id.list1);
 		et = (EditText) findViewById(R.id.EditText01);
 		tmodel = (TextView) findViewById(R.id.model);
-		tmanf = (TextView) findViewById(R.id.manu);
+		tmake = (TextView) findViewById(R.id.menu);
 		tmodel.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
-		tmanf.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
+		tmake.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
 		btn = (Button) findViewById(R.id.next);
 		btn.setOnClickListener(this);
 		btn.setEnabled(false);
+		btnLogout = (Button) findViewById(R.id.logout);
 		pin = getIntent().getStringExtra("pin");
 
 
@@ -85,7 +87,7 @@ public class VehicleSelector extends Activity implements OnClickListener {
 	
 	public void validate_vehicle() {
 
-		new DownloadVechicles().execute(url_main);
+		new DownloadVehicles().execute(url_main);
 	}
 	
 	public void validate_vehicle_details() {
@@ -93,7 +95,7 @@ public class VehicleSelector extends Activity implements OnClickListener {
 		new DownloadVehicleDetails().execute(url_main);
 	}
 
-	public class DownloadVechicles extends AsyncTask<String, Integer, String> {
+	public class DownloadVehicles extends AsyncTask<String, Integer, String> {
 		@Override
 		protected void onPreExecute() {
 			
@@ -278,10 +280,10 @@ public class VehicleSelector extends Activity implements OnClickListener {
 		protected void onPostExecute(String result) {
 			// TODO Auto-generated method stub
 			dialog.dismiss();
-			tmanf.setText(manf);
+			tmake.setText(manf);
 			tmodel.setText(model);
 			
-			if(tmanf.getText().toString().length()>0 && tmodel.getText().toString().length()>0){
+			if(tmake.getText().toString().length()>0 && tmodel.getText().toString().length()>0){
 				btn.setEnabled(true);
 			}
 		}
@@ -293,7 +295,7 @@ public class VehicleSelector extends Activity implements OnClickListener {
 		//Intent n = new Intent(getApplicationContext(), DefectSelection.class);
         Intent n = new Intent(getApplicationContext(), DefectEntry.class);
 		//Log.i("TEST", ""+pos);
-		n.putExtra("vech_id", ""+pos);
+		n.putExtra("vehicle_id", ""+pos);
 		n.putExtra("pin", pin);
 		startActivity(n);
 		finish();
