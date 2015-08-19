@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/savenotes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/button_style"
+                android:text="@string/newnote" />
+
+            <Button
+                android:id="@+id/cancelnotes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/button_style"
+                android:text="@string/cancel" />
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/selectadd"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+    <ListView
+        android:id="@+id/list1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#b5b5b5"
+        android:dividerHeight="1dp"
+        android:cacheColorHint="#00000000"/>
+
+</LinearLayout><!-- From: file:/C:/Users/Joshua/AndroidStudioProjects/Defects/app/src/main/res/layout/note_entry.xml -->

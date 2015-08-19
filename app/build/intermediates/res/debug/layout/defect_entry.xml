@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/integra_logo_1200f"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/defectselection"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_marginBottom="135dp"/>
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="275dp"
+            android:layout_weight="1.0"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/rl1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <RelativeLayout
+                    android:id="@+id/rlextra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <Button
+                        android:id="@+id/nil"
+                        android:layout_width="300dp"
+                        android:layout_height="70dp"
+                        android:background="#ff106600"
+                        android:textColor="#fff3f1ff"
+                        android:text="@string/nodefect"
+                        android:textSize="20dp"
+                        android:layout_marginLeft="50dp"/>
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="275dp"
+            android:layout_weight="1.0"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/rl2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <RelativeLayout
+                    android:id="@+id/rlreport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <Button
+                        android:id="@+id/report"
+                        android:layout_width="300dp"
+                        android:layout_height="70dp"
+                        android:background="#ff106600"
+                        android:textColor="#fff3f1ff"
+                        android:text="@string/adddefect"
+                        android:textSize="20dp"
+                        android:paddingRight="20dp"/>
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout><!-- From: file:/C:/Users/Joshua/AndroidStudioProjects/Defects/app/src/main/res/layout/defect_entry.xml -->

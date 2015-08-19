@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginTop="20dip">
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dip" >
+
+            <Button
+                android:id="@+id/btntoplevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                style="@style/button_style"
+                android:text="@string/selectfirst"
+                android:background="#ff106600" />
+
+            <TextView
+                android:id="@+id/ettoplevel"
+                android:layout_marginLeft="30dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="true" >
+              
+            </TextView>
+            
+            <TextView
+                android:id="@+id/t1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="true" >
+              
+            </TextView>
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dip" >
+
+            <Button
+                android:id="@+id/btnsublevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                style="@style/button_style"
+                android:text="@string/selectsecond"
+                android:background="#ff106600" />
+
+            <TextView
+                android:id="@+id/etsublevel"
+                android:layout_marginLeft="30dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="true" >
+                
+            </TextView>
+            
+            <TextView
+                android:id="@+id/t2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="true" >
+                
+            </TextView>
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dip" >
+
+            <Button
+                android:id="@+id/btnitemlevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                style="@style/button_style"
+                android:text="@string/selectthird"
+                android:background="#ff106600" />
+            
+            <TextView
+                android:id="@+id/etitemlevel"
+                android:layout_marginLeft="30dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="true" >
+               
+            </TextView>
+            
+             <TextView
+                android:id="@+id/t3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="true"
+                 android:background="#ff106600">
+               
+            </TextView>
+
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dip" >
+
+            <Button
+                android:id="@+id/btnnoteslevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                style="@style/button_style"
+                android:text="@string/notes"
+                android:background="#ff106600" />
+
+            <TextView
+                android:id="@+id/noteadd"
+                android:layout_marginLeft="30dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 />
+
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tableLayout1"
+        android:layout_below="@+id/tableLayout1"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="20dip"
+        android:stretchColumns="*"
+        android:id="@+id/tableLayout">
+
+        <TableRow
+            android:id="@+id/tableRow5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+    <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/button_style"
+                android:text="@string/submitdefect"
+        android:background="#ff106600"
+        android:textColor="#fff3f1ff" />
+
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/button_style"
+        android:text="@string/submitfinish"
+        android:layout_below="@+id/tableLayout"
+        android:layout_alignLeft="@+id/tableLayout"
+        android:layout_alignStart="@+id/tableLayout"
+        android:layout_alignRight="@+id/tableLayout"
+        android:layout_alignEnd="@+id/tableLayout"
+        android:background="#ff106600"
+        android:textColor="#fff3f1ff" />
+
+    <Button
+android:id="@+id/button3"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+style="@style/button_style"
+android:text="@string/cancel"
+        android:layout_below="@+id/button2"
+        android:layout_alignLeft="@+id/button2"
+        android:layout_alignStart="@+id/button2"
+        android:layout_alignRight="@+id/button2"
+        android:layout_alignEnd="@+id/button2"
+        android:background="#ff106600"
+        android:textColor="#fff3f1ff" />
+</RelativeLayout><!-- From: file:/C:/Users/Joshua/AndroidStudioProjects/Defects/app/src/main/res/layout/defect_selection.xml -->

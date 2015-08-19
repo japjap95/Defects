@@ -1,0 +1,74 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tableLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:stretchColumns="1.1,1"
+    android:background="#fffff8ff">
+
+    <!-- 2 columns -->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/login_logo"
+            android:src="@drawable/integra_logo_1200f"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+  <!--  <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+    </TableRow>-->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/txtPin"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:hint="@string/pin"
+            android:inputType="number" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/errormsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="250dp"
+            android:background="#ff106600"
+            android:textColor="#fff3f1ff"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="15dip"
+            android:textSize="20px"
+            android:text="@string/next" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/deviceID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoText="false" />
+
+</TableLayout><!-- From: file:/C:/Users/Joshua/AndroidStudioProjects/Defects/app/src/main/res/layout/loginmenu.xml -->

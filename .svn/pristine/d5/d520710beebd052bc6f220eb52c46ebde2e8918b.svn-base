@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1.0"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="20dp">
+
+                <EditText
+                    android:id="@+id/EditText01"
+                    android:layout_width="500dp"
+                    android:layout_height="63dp"
+                    android:hint="Search for vehicle registration"
+                    android:layout_alignParentEnd="true" />
+
+                <ListView
+                    android:id="@+id/list1"
+                    android:layout_width="500dp"
+                    android:layout_height="500dp"
+                    android:cacheColorHint="#00000000"
+                    android:divider="#b5b5b5"
+                    android:dividerHeight="1dp"
+                    android:layout_below="@+id/EditText01"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1.0"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <Button
+                    android:id="@+id/next"
+                    android:layout_width="170dp"
+                    android:layout_height="90dp"
+                    android:text="Next"
+                    android:textSize="30dp"
+                    android:textColor="#fff3f1ff"
+                    android:background="#ff106600"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.15"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="75dp" />
+
+                <TextView
+                    android:id="@+id/model"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="90dp"/>
+
+                <TextView
+                    android:id="@+id/manu"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/model"
+                    android:layout_centerHorizontal="true" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

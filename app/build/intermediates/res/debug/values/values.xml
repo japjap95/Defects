@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/C:/Users/Joshua/AndroidStudioProjects/Defects/app/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- From: file:/C:/Users/Joshua/AndroidStudioProjects/Defects/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="action_settings">Settings</string>
+    <string name="adddefect">Add defect.</string>
+    <string name="app_name">Driver Defects Entry</string>
+    <string name="cancel">Cancel</string>
+    <string name="defectselection">Would you like to add a defect? (Select "Nil defects" if you have no defects to report, otherwise select "Add defect)."</string>
+    <string name="enter">Enter New Note:</string>
+    <string name="newnote">New Note</string>
+    <string name="next">Submit</string>
+    <string name="nodefect">Nil defects.</string>
+    <string name="notes">Notes</string>
+    <string name="pin">Pin number</string>
+    <string name="selectadd">Select or Add New Note:</string>
+    <string name="selectfirst">Select 1st</string>
+    <string name="selectsecond">Select 2nd</string>
+    <string name="selectthird">Select 3rd</string>
+    <string name="submitdefect">Submit and Add Defect</string>
+    <string name="submitfinish">Submit and Finish</string>
+    <!-- From: file:/C:/Users/Joshua/AndroidStudioProjects/Defects/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    <style name="button_style" parent="@android:style/Widget.Button">
+        <item name="android:textSize">20sp</item>
+        <item name="android:minHeight">55dp</item>
+        <item name="android:minWidth">95dp</item>
+    </style>
+</resources>

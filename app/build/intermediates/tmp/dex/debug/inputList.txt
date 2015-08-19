@@ -1,0 +1,2 @@
+C:\Users\Joshua\AndroidStudioProjects\Defects\app\build\intermediates\classes\debug
+C:\Users\Joshua\AndroidStudioProjects\Defects\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0-31bf6f4ae4fcfcb5c1b35bc4759b1f86e62d3214.jar
