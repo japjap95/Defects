@@ -31,13 +31,37 @@
             android:name="com.example.testing_load.MainActivity"
             android:screenOrientation="landscape" >
         </activity>
-        <activity android:name="com.example.testing_load.VehicleSelector" >
+        <activity
+            android:name="com.example.testing_load.VehicleSelector"
+            android:screenOrientation="landscape" >
         </activity>
-        <activity android:name="com.example.testing_load.DefectSelection" >
+        <activity
+            android:name="com.example.testing_load.DefectSelection"
+            android:screenOrientation="landscape" >
         </activity>
-        <activity android:name="com.example.testing_load.NoteDefectEntry" >
+        <activity
+            android:name="com.example.testing_load.NoteDefectEntry"
+            android:screenOrientation="landscape" >
         </activity>
-        <activity android:name="com.example.testing_load.DefectEntry" >
+        <activity
+            android:name="com.example.testing_load.DefectEntry"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.example.testing_load.Confirmation"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.example.testing_load.DefectAdditionMain"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.example.testing_load.TierOneListView"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.example.testing_load.TierTwoListView"
+            android:screenOrientation="landscape" >
         </activity>
     </application>
 

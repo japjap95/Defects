@@ -12,10 +12,30 @@
     <string name="newnote">New Note</string>
     <string name="selectadd">Select or Add New Note:</string>
     <string name="enter">Enter New Note:</string>
+
+    <!--loginmenu-->
     <string name="next">Submit</string>
     <string name="pin">Pin number</string>
-    <string name="nodefect">Nil defects.</string>
-    <string name="adddefect">Add defect.</string>
-    <string name="defectselection">Would you like to add a defect? (Select "Nil defects" if you have no defects to report, otherwise select "Add defect)."</string>
+
+    <!--vehicle_selector-->
+    <string name="vehicle_hint">Search for vehicle make, model or registration</string>
+
+    <!--yes_or_no-->
+    <string name="nodefect">No</string>
+    <string name="adddefect">Yes</string>
+    <string name="defectselection">Would you like to submit a defect?</string>
+
+    <!--defect_addition_main-->
+    <string name="add_new_defect">Add new defect</string>
+    <string name="remove_selected_defect">Remove selected defect</string>
+    <string name="finish_adding_defects">Finish adding defects</string>
+
+    <!--confirmation-->
+    <string name="exitapp">Confirm and exit</string>
+
+
+    <!--USEFUL INFORMATION-->
+    button background colour = #ff106600
+    text colour = #fff3f1ff
 
 </resources>

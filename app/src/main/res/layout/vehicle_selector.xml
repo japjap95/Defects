@@ -6,87 +6,77 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_weight="1.0"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:weightSum="1">
 
         <LinearLayout
             android:id="@+id/ll1"
-            android:layout_width="match_parent"
+            android:layout_width="188dp"
             android:layout_height="match_parent"
             android:layout_marginTop="20dp"
-            android:layout_weight="1.0"
-            android:orientation="horizontal" >
+            android:orientation="horizontal"
+            android:layout_weight="0.40">
 
             <RelativeLayout
-                android:layout_width="fill_parent"
+                android:layout_width="270dp"
                 android:layout_height="fill_parent"
                 android:layout_marginLeft="20dp">
 
                 <EditText
                     android:id="@+id/EditText01"
-                    android:layout_width="500dp"
+                    android:layout_width="match_parent"
                     android:layout_height="63dp"
-                    android:hint="Search for vehicle registration"
-                    android:layout_alignParentEnd="true" />
+                    android:hint="@string/vehicle_hint"
+                    android:layout_marginLeft="20dp"
+                    android:layout_alignRight="@+id/list1"
+                    android:layout_alignEnd="@+id/list1"/>
 
                 <ListView
                     android:id="@+id/list1"
-                    android:layout_width="500dp"
-                    android:layout_height="500dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:cacheColorHint="#00000000"
                     android:divider="#b5b5b5"
                     android:dividerHeight="1dp"
                     android:layout_below="@+id/EditText01"
                     android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true" />
-            </RelativeLayout>
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:id="@+id/ll2"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_marginTop="20dp"
-            android:layout_weight="1.0"
-            android:orientation="vertical" >
-
-            <RelativeLayout
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent" >
-
-                <Button
-                    android:id="@+id/next"
-                    android:layout_width="170dp"
-                    android:layout_height="90dp"
-                    android:text="Next"
-                    android:textSize="30dp"
-                    android:textColor="#fff3f1ff"
-                    android:background="#ff106600"
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight="1.15"
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="75dp" />
-
-
-                <TextView
-                    android:id="@+id/model"
-                    android:layout_gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="90dp"/>
-
-                <TextView
-                    android:id="@+id/menu"
-                    android:layout_gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/model"
-                    android:layout_centerHorizontal="true" />
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_centerHorizontal="true"/>
 
             </RelativeLayout>
         </LinearLayout>
+
+
     </LinearLayout>
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="175dp"
+        android:layout_height="75dp"
+        android:text="Next"
+        android:textSize="30dp"
+        android:textColor="#fff3f1ff"
+        android:background="#ff106600"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1.15"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/vehicleOverview"
+        android:layout_alignStart="@+id/vehicleOverview"
+        android:layout_marginLeft="104dp"
+        android:layout_marginStart="104dp"
+        android:layout_alignParentLeft="false"/>
+
+    <TextView
+        android:id="@+id/vehicleOverview"
+        android:layout_width="275dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="53dp"
+        android:textSize="25dp"/>
 
 </RelativeLayout>

@@ -1,10 +1,8 @@
 package com.example.testing_load;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.os.AsyncTask;
@@ -12,7 +10,6 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
-import android.util.TypedValue;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
@@ -37,10 +34,13 @@ public class VehicleSelector extends Activity implements OnClickListener {
 	int[] data_id;
 	int pos = 0, id = 0, b=0;
     EditText et;
-    TextView tmodel, tmake;
+    TextView vehicleOverview;
+    String tmodel = "";
+    String tmake = "";
+    String treg = "";
+    String vOverview;
     String[] str;
     Button btn;
-	Button btnLogout;
     ProgressDialog dialog;
     String[] datainfo = new String[16];
     String[] datainfo1 = new String[16];
@@ -57,32 +57,25 @@ public class VehicleSelector extends Activity implements OnClickListener {
                 android.R.layout.simple_list_item_1);
 		lvTopCat = (ListView) findViewById(R.id.list1);
 		et = (EditText) findViewById(R.id.EditText01);
-		tmodel = (TextView) findViewById(R.id.model);
-		tmake = (TextView) findViewById(R.id.menu);
-		tmodel.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
-		tmake.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
 		btn = (Button) findViewById(R.id.next);
 		btn.setOnClickListener(this);
-		btn.setEnabled(false);
-		btnLogout = (Button) findViewById(R.id.logout);
+		btn.setEnabled(true);
 		pin = getIntent().getStringExtra("pin");
+
 
 
 		url_main = "geteqptlist.ashx";
 		validate_vehicle();
+
+        vOverview = "Selected vehicle: " + "\n" + "Make: " + tmake + "\n" + "Model: " + tmodel + "\n" + "Registration: " + treg;
+        vehicleOverview = (TextView) findViewById(R.id.vehicleOverview);
+        vehicleOverview.setText(vOverview);
 		
 	}
 
 	public void onBackPressed() {
-		new AlertDialog.Builder(this)
-		.setMessage("Are you sure you want to exit?")
-		.setCancelable(false)
-		.setPositiveButton("Yes",
-				new DialogInterface.OnClickListener() {
-					public void onClick(DialogInterface dialog, int id) {
-						VehicleSelector.this.finish();
-					}
-				}).setNegativeButton("No", null).show();
+	Intent intent = new Intent(getApplicationContext(), LoginMenu.class);
+		startActivity(intent);
 	}
 	
 	public void validate_vehicle() {
@@ -114,7 +107,7 @@ public class VehicleSelector extends Activity implements OnClickListener {
 					"Loading. Please wait...", true);
 			dialog.show();
 			
-		};
+		}
 
 		@Override
 		protected String doInBackground(String... params) {
@@ -165,6 +158,7 @@ public class VehicleSelector extends Activity implements OnClickListener {
 		protected void onPostExecute(String result) {
 			// TODO Auto-generated method stub
 			dialog.dismiss();
+
 			
 			str = new String[lstItems.getCount()];
 			if (result.equals("OK")) {
@@ -266,7 +260,7 @@ public class VehicleSelector extends Activity implements OnClickListener {
 			try {
 				JSONObject dataObject = json.getJSONObject("data");
 				manf = dataObject.getString("manf");
-				model =dataObject.getString("model");
+				model = dataObject.getString("model");
 				result = json.getString("result");
 
 			} catch (JSONException e) {
@@ -280,14 +274,18 @@ public class VehicleSelector extends Activity implements OnClickListener {
 		protected void onPostExecute(String result) {
 			// TODO Auto-generated method stub
 			dialog.dismiss();
-			tmake.setText(manf);
-			tmodel.setText(model);
+			tmake = manf;
+			tmodel = model;
+            vOverview = "Selected vehicle: " + "\n" + "Make: " + tmake + "\n" + "Model: " + tmodel + "\n" + "Registration: " + treg;
+            vehicleOverview = (TextView) findViewById(R.id.vehicleOverview);
+            vehicleOverview.setText(vOverview);
+
 			
-			if(tmake.getText().toString().length()>0 && tmodel.getText().toString().length()>0){
-				btn.setEnabled(true);
+//			if(tmake.getText().toString().length()>0 && tmodel.getText().toString().length()>0){
+//				btn.setEnabled(true);
 			}
 		}
-	}
+
 
 	@Override
 	public void onClick(View v) {
@@ -295,7 +293,8 @@ public class VehicleSelector extends Activity implements OnClickListener {
 		//Intent n = new Intent(getApplicationContext(), DefectSelection.class);
         Intent n = new Intent(getApplicationContext(), DefectEntry.class);
 		//Log.i("TEST", ""+pos);
-		n.putExtra("vehicle_id", ""+pos);
+		n.putExtra("vehicle_make", manf);
+        n.putExtra("vehicle_model", model);
 		n.putExtra("pin", pin);
 		startActivity(n);
 		finish();

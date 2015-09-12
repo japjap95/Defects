@@ -28,19 +28,41 @@
         </activity>
         
         <activity android:name=".MainActivity"
-            android:screenOrientation="landscape">
+                  android:screenOrientation="landscape">
 		</activity>
         
-		<activity android:name=".VehicleSelector"> 
+		<activity android:name=".VehicleSelector"
+                  android:screenOrientation="landscape">
 		</activity>
 		
-        <activity android:name=".DefectSelection"> 
+        <activity android:name=".DefectSelection"
+                  android:screenOrientation="landscape">
 		</activity>
 		
-        <activity android:name=".NoteDefectEntry"> 
+        <activity android:name=".NoteDefectEntry"
+                  android:screenOrientation="landscape">
 		</activity>
 
-        <activity android:name=".DefectEntry">
+        <activity android:name=".DefectEntry"
+                  android:screenOrientation="landscape">
+        </activity>
+
+        <activity android:name=".Confirmation"
+                  android:screenOrientation="landscape">
+        </activity>
+
+        <activity android:name=".DefectAdditionMain"
+                  android:screenOrientation="landscape">
+        </activity>
+
+        <activity android:name=".TierOneListView"
+                  android:screenOrientation="landscape">
+
+        </activity>
+
+        <activity android:name=".TierTwoListView"
+                  android:screenOrientation="landscape">
+
         </activity>
 		
     </application>
